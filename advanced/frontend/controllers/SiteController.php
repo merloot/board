@@ -74,14 +74,15 @@ class SiteController extends Controller
 
         public function actionIndex()
     {
-
-//        //Незабыть доделать сортировку по дате публикации
         $posters= Poster::find()->andWhere(['po_status'=>1])->all();
-        return $this->render('index',['posters'=>$posters]);
-
+        return $this->render('all',['posters'=>$posters]);
     }
 
-
+//        public function actionOne($po_id)
+//    {
+//        $poster= Poster::find()->andWhere(['po_id'=>$po_id])->one();
+//        return $this->render('one',['poster'=>$poster]);
+//    }
     /**
      * Logs in a user.
      *

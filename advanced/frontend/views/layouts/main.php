@@ -50,7 +50,7 @@ AppAsset::register($this);
             . Html::endForm()
             . '</li>';
         $menuItems[] = '<li>'
-            . Html::beginForm(['/poster/index'], 'profile')
+            . Html::beginForm(['/poster/index'], 'post')
             . Html::submitButton(
                 'Мои объявления',
                 ['class' => 'btn btn-link logout']
@@ -58,7 +58,7 @@ AppAsset::register($this);
             . Html::endForm()
             . '</li>';
         $menuItems[] = '<li>'
-            . Html::beginForm(['/profile/view','post'])
+            . Html::beginForm()
             . Html::submitButton(
                 'Личный кабинет',
                 ['class' => 'btn btn-link logout']
@@ -66,7 +66,7 @@ AppAsset::register($this);
             . Html::endForm()
             . '</li>';
         $menuItems[] = '<li>'
-            . Html::beginForm(['/profile/create'], 'profile')
+            . Html::beginForm(['/profile/create'], 'post')
             . Html::submitButton(
                 'Создать личный кабинет',
                 ['class' => 'btn btn-link logout']

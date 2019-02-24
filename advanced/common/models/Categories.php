@@ -42,4 +42,8 @@ class Categories extends \yii\db\ActiveRecord
             'categories' => 'Categories',
         ];
     }
+    public function getPoster()
+    {
+        return $this->hasOne(Poster::className(),['po_id_categories'=>'id']);
+    }
 }

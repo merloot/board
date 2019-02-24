@@ -40,12 +40,18 @@ class PosterController extends Controller
         $searchModel = new PosterSearch();
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
 
-        return $this->render('index', [
+
+        return
+            $this->render('index', [
             'searchModel' => $searchModel,
             'dataProvider' => $dataProvider,
         ]);
     }
-
+    public function actionOne($po_id)
+    {
+        $poster= Poster::find()->andWhere(['po_id'=>$po_id])->one();
+        return $this->render('one',['poster'=>$poster]);
+    }
     /**
      * Displays a single Poster model.
      * @param integer $id

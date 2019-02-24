@@ -48,11 +48,11 @@ return [
         'errorHandler' => [
             'errorAction' => 'site/error',
         ],
-
         'urlManager' => [
             'enablePrettyUrl' => true,
             'showScriptName' => false,
             'rules' => [
+//                'poster/<po_id>'=>'site/one',
             ],
         ],
     ],

@@ -85,11 +85,6 @@ class Poster extends ActiveRecord
                 'value'=>new Expression('NOW()'),
 
             ],
-//
-//                    'image' => [
-//                    'class' => 'rico\yii2images\behaviors\ImageBehave',
-//                        ]
-
         ];
     }
 
@@ -98,12 +93,12 @@ class Poster extends ActiveRecord
      */
     public function getAuthor()
     {
-        return $this->hasOne(User::className(),['id'=>'po_id_auth']);
+        return $this->hasOne(Profile::className(),['p_id_user'=>'po_id_auth']);
 
     }
     public function getCity()
     {
-        return $this->hasOne(City::className(),['id'=>'po_id_city']);
+        return $this->hasOne(City::className(),['c_id'=>'po_id_city']);
 
     }
     public function getCategories()

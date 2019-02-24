@@ -43,4 +43,8 @@ class City extends ActiveRecord
             'c_city' => 'C City',
         ];
     }
+    public function getPoster()
+    {
+        return $this->hasOne(Poster::className(),['po_id_city'=>'c_id']);
+    }
 }
