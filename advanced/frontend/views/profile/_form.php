@@ -17,9 +17,7 @@ use yii\widgets\MaskedInput;
 
     <?php $form = ActiveForm::begin(); ?>
 
-<!--    --><?//= $form->field($model, 'p_id')->textInput() ?>
 
-<!--    --><?//= $form->field($model, 'p_id_user')->textInput() ?>
 
     <?= $form->field($model, 'p_name')->textInput(['maxlength' => true]) ?>
 
@@ -30,7 +28,7 @@ use yii\widgets\MaskedInput;
     <?= $form->field($model, 'p_description')->textInput(['maxlength' => true]) ?>
 
     <?=$form->field($model, 'p_id_city')->widget(Select2::classname(), [
-        'data' => ArrayHelper::map(City::find()->all(),'c_id','c_city'),
+        'data' => ArrayHelper::map(City::find()->all(),'c_id','c_name'),
         'language' => 'ru',
         'options' => ['placeholder' => 'Выберите город'],
         'pluginOptions' => [

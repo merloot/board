@@ -18,9 +18,9 @@ class m181120_111109_categories extends Migration
             $tableOptions = 'CHARACTER SET utf8 COLLATE utf8_unicode_ci ENGINE=InnoDB';
         }
 
-        $this->createTable('{{%categories}}', [
-            'id' => $this->primaryKey(),
-            'categories' => $this->string()->notNull()->unique(),
+        $this->createTable('{{%Categories}}', [
+            'cat_id' => $this->primaryKey(),
+            'cat_name' => $this->string()->notNull()->unique(),
         ], $tableOptions);
 
     }
@@ -30,7 +30,7 @@ class m181120_111109_categories extends Migration
      */
     public function down()
     {
-        $this->dropTable('{{%categories}}');
+        $this->dropTable('{{%Categories}}');
     }
 
     /*

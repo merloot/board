@@ -3,22 +3,24 @@
 namespace common\models;
 
 use Yii;
-use yii\db\ActiveRecord;
 
 /**
- * This is the model class for table "city".
+ * This is the model class for table "City".
  *
  * @property int $c_id
- * @property string $c_city
+ * @property string $c_name
+ *
+ * @property Poster[] $posters
+ * @property Profile[] $profiles
  */
-class City extends ActiveRecord
+class City extends \yii\db\ActiveRecord
 {
     /**
      * {@inheritdoc}
      */
     public static function tableName()
     {
-        return 'city';
+        return 'City';
     }
 
     /**
@@ -27,9 +29,9 @@ class City extends ActiveRecord
     public function rules()
     {
         return [
-            [['c_city'], 'required'],
-            [['c_city'], 'string', 'max' => 255],
-            [['c_city'], 'unique'],
+            [['c_name'], 'required'],
+            [['c_name'], 'string', 'max' => 255],
+            [['c_name'], 'unique'],
         ];
     }
 
@@ -40,11 +42,23 @@ class City extends ActiveRecord
     {
         return [
             'c_id' => 'C ID',
-            'c_city' => 'C City',
+            'c_name' => 'C Name',
         ];
     }
-    public function getPoster()
+
+    /**
+     * @return \yii\db\ActiveQuery
+     */
+    public function getPosters()
     {
-        return $this->hasOne(Poster::className(),['po_id_city'=>'c_id']);
+        return $this->hasMany(Poster::className(), ['po_id_city' => 'c_id']);
+    }
+
+    /**
+     * @return \yii\db\ActiveQuery
+     */
+    public function getProfiles()
+    {
+        return $this->hasMany(Profile::className(), ['p_id_city' => 'c_id']);
     }
 }

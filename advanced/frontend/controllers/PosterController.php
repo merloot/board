@@ -5,17 +5,17 @@ namespace frontend\controllers;
 use Yii;
 use common\models\Poster;
 use common\models\PosterSearch;
+use yii\behaviors\TimestampBehavior;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
-use yii\web\UploadedFile;
+use yii\db\Expression;
 
 /**
  * PosterController implements the CRUD actions for Poster model.
  */
 class PosterController extends Controller
 {
-
     /**
      * {@inheritdoc}
      */
@@ -28,6 +28,13 @@ class PosterController extends Controller
                     'delete' => ['POST'],
                 ],
             ],
+            'timestamp'=>[
+                'class'=>TimestampBehavior::className(),
+                'createdAtAttribute'=>'po_data_create',
+                'updatedAtAttribute' => 'po_data_create',
+                'value'=>new Expression('NOW()'),
+
+            ]
         ];
     }
 
@@ -40,18 +47,19 @@ class PosterController extends Controller
         $searchModel = new PosterSearch();
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
 
-
-        return
-            $this->render('index', [
+        return $this->render('index', [
             'searchModel' => $searchModel,
             'dataProvider' => $dataProvider,
         ]);
     }
-    public function actionOne($po_id)
+
+
+        public function actionOne($po_id)
     {
         $poster= Poster::find()->andWhere(['po_id'=>$po_id])->one();
         return $this->render('one',['poster'=>$poster]);
     }
+
     /**
      * Displays a single Poster model.
      * @param integer $id
@@ -75,14 +83,6 @@ class PosterController extends Controller
         $model = new Poster();
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
-//            $model->po_image =UploadedFile::getInstance($model,'po_image');
-//            if ($model->po_image)
-//            {
-//                $path=Yii::getAlias('@images').$model->po_image->baseName.'.'.$model->po_image->extension;
-//                $model->po_image->saveAs($path);
-//                $model->attachImage($path);
-//            }
-
             return $this->redirect(['view', 'id' => $model->po_id]);
         }
 
@@ -103,15 +103,6 @@ class PosterController extends Controller
         $model = $this->findModel($id);
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
-//            $model->po_image =UploadedFile::getInstance($model,'po_image');
-//            if ($model->po_image)
-//            {
-//                $path=Yii::getAlias('@images').$model->po_image->baseName.'.'.$model->po_image->extension;
-//                $model->po_image->saveAs($path);
-//                $model->attachImage($path);
-//
-//            }
-
             return $this->redirect(['view', 'id' => $model->po_id]);
         }
 
@@ -149,4 +140,7 @@ class PosterController extends Controller
 
         throw new NotFoundHttpException('The requested page does not exist.');
     }
+
+
+
 }

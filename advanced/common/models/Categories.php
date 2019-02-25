@@ -5,10 +5,12 @@ namespace common\models;
 use Yii;
 
 /**
- * This is the model class for table "categories".
+ * This is the model class for table "Categories".
  *
- * @property int $id
- * @property string $categories
+ * @property int $cat_id
+ * @property string $cat_name
+ *
+ * @property Poster[] $posters
  */
 class Categories extends \yii\db\ActiveRecord
 {
@@ -17,7 +19,7 @@ class Categories extends \yii\db\ActiveRecord
      */
     public static function tableName()
     {
-        return 'categories';
+        return 'Categories';
     }
 
     /**
@@ -26,9 +28,9 @@ class Categories extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['categories'], 'required'],
-            [['categories'], 'string', 'max' => 255],
-            [['categories'], 'unique'],
+            [['cat_name'], 'required'],
+            [['cat_name'], 'string', 'max' => 255],
+            [['cat_name'], 'unique'],
         ];
     }
 
@@ -38,12 +40,16 @@ class Categories extends \yii\db\ActiveRecord
     public function attributeLabels()
     {
         return [
-            'id' => 'ID',
-            'categories' => 'Categories',
+            'cat_id' => 'Cat ID',
+            'cat_name' => 'Cat Name',
         ];
     }
-    public function getPoster()
+
+    /**
+     * @return \yii\db\ActiveQuery
+     */
+    public function getPosters()
     {
-        return $this->hasOne(Poster::className(),['po_id_categories'=>'id']);
+        return $this->hasMany(Poster::className(), ['po_id_categories' => 'cat_id']);
     }
 }

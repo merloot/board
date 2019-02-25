@@ -1,20 +1,80 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <module type="WEB_MODULE" version="4">
   <component name="NewModuleRootManager">
-    <content url="file://$MODULE_DIR$" />
+    <content url="file://$MODULE_DIR$">
+      <excludeFolder url="file://$MODULE_DIR$/advanced/vendor/behat/gherkin" />
+      <excludeFolder url="file://$MODULE_DIR$/advanced/vendor/bower-asset/bootstrap" />
+      <excludeFolder url="file://$MODULE_DIR$/advanced/vendor/bower-asset/inputmask" />
+      <excludeFolder url="file://$MODULE_DIR$/advanced/vendor/bower-asset/jquery" />
+      <excludeFolder url="file://$MODULE_DIR$/advanced/vendor/bower-asset/punycode" />
+      <excludeFolder url="file://$MODULE_DIR$/advanced/vendor/bower-asset/typeahead.js" />
+      <excludeFolder url="file://$MODULE_DIR$/advanced/vendor/bower-asset/yii2-pjax" />
+      <excludeFolder url="file://$MODULE_DIR$/advanced/vendor/cebe/markdown" />
+      <excludeFolder url="file://$MODULE_DIR$/advanced/vendor/codeception/base" />
+      <excludeFolder url="file://$MODULE_DIR$/advanced/vendor/codeception/phpunit-wrapper" />
+      <excludeFolder url="file://$MODULE_DIR$/advanced/vendor/codeception/stub" />
+      <excludeFolder url="file://$MODULE_DIR$/advanced/vendor/codeception/verify" />
+      <excludeFolder url="file://$MODULE_DIR$/advanced/vendor/composer" />
+      <excludeFolder url="file://$MODULE_DIR$/advanced/vendor/doctrine/instantiator" />
+      <excludeFolder url="file://$MODULE_DIR$/advanced/vendor/doctrine/lexer" />
+      <excludeFolder url="file://$MODULE_DIR$/advanced/vendor/egulias/email-validator" />
+      <excludeFolder url="file://$MODULE_DIR$/advanced/vendor/ezyang/htmlpurifier" />
+      <excludeFolder url="file://$MODULE_DIR$/advanced/vendor/fzaninotto/faker" />
+      <excludeFolder url="file://$MODULE_DIR$/advanced/vendor/guzzlehttp/psr7" />
+      <excludeFolder url="file://$MODULE_DIR$/advanced/vendor/kartik-v/bootstrap-fileinput" />
+      <excludeFolder url="file://$MODULE_DIR$/advanced/vendor/kartik-v/yii2-krajee-base" />
+      <excludeFolder url="file://$MODULE_DIR$/advanced/vendor/kartik-v/yii2-widget-fileinput" />
+      <excludeFolder url="file://$MODULE_DIR$/advanced/vendor/kartik-v/yii2-widget-select2" />
+      <excludeFolder url="file://$MODULE_DIR$/advanced/vendor/myclabs/deep-copy" />
+      <excludeFolder url="file://$MODULE_DIR$/advanced/vendor/phar-io/manifest" />
+      <excludeFolder url="file://$MODULE_DIR$/advanced/vendor/phar-io/version" />
+      <excludeFolder url="file://$MODULE_DIR$/advanced/vendor/phpdocumentor/reflection-common" />
+      <excludeFolder url="file://$MODULE_DIR$/advanced/vendor/phpdocumentor/reflection-docblock" />
+      <excludeFolder url="file://$MODULE_DIR$/advanced/vendor/phpdocumentor/type-resolver" />
+      <excludeFolder url="file://$MODULE_DIR$/advanced/vendor/phpspec/php-diff" />
+      <excludeFolder url="file://$MODULE_DIR$/advanced/vendor/phpspec/prophecy" />
+      <excludeFolder url="file://$MODULE_DIR$/advanced/vendor/phpunit/php-code-coverage" />
+      <excludeFolder url="file://$MODULE_DIR$/advanced/vendor/phpunit/php-file-iterator" />
+      <excludeFolder url="file://$MODULE_DIR$/advanced/vendor/phpunit/php-text-template" />
+      <excludeFolder url="file://$MODULE_DIR$/advanced/vendor/phpunit/php-timer" />
+      <excludeFolder url="file://$MODULE_DIR$/advanced/vendor/phpunit/php-token-stream" />
+      <excludeFolder url="file://$MODULE_DIR$/advanced/vendor/phpunit/phpunit" />
+      <excludeFolder url="file://$MODULE_DIR$/advanced/vendor/psr/http-message" />
+      <excludeFolder url="file://$MODULE_DIR$/advanced/vendor/ralouphie/getallheaders" />
+      <excludeFolder url="file://$MODULE_DIR$/advanced/vendor/sebastian/code-unit-reverse-lookup" />
+      <excludeFolder url="file://$MODULE_DIR$/advanced/vendor/sebastian/comparator" />
+      <excludeFolder url="file://$MODULE_DIR$/advanced/vendor/sebastian/diff" />
+      <excludeFolder url="file://$MODULE_DIR$/advanced/vendor/sebastian/environment" />
+      <excludeFolder url="file://$MODULE_DIR$/advanced/vendor/sebastian/exporter" />
+      <excludeFolder url="file://$MODULE_DIR$/advanced/vendor/sebastian/global-state" />
+      <excludeFolder url="file://$MODULE_DIR$/advanced/vendor/sebastian/object-enumerator" />
+      <excludeFolder url="file://$MODULE_DIR$/advanced/vendor/sebastian/object-reflector" />
+      <excludeFolder url="file://$MODULE_DIR$/advanced/vendor/sebastian/recursion-context" />
+      <excludeFolder url="file://$MODULE_DIR$/advanced/vendor/sebastian/resource-operations" />
+      <excludeFolder url="file://$MODULE_DIR$/advanced/vendor/sebastian/version" />
+      <excludeFolder url="file://$MODULE_DIR$/advanced/vendor/swiftmailer/swiftmailer" />
+      <excludeFolder url="file://$MODULE_DIR$/advanced/vendor/symfony/browser-kit" />
+      <excludeFolder url="file://$MODULE_DIR$/advanced/vendor/symfony/console" />
+      <excludeFolder url="file://$MODULE_DIR$/advanced/vendor/symfony/contracts" />
+      <excludeFolder url="file://$MODULE_DIR$/advanced/vendor/symfony/css-selector" />
+      <excludeFolder url="file://$MODULE_DIR$/advanced/vendor/symfony/dom-crawler" />
+      <excludeFolder url="file://$MODULE_DIR$/advanced/vendor/symfony/event-dispatcher" />
+      <excludeFolder url="file://$MODULE_DIR$/advanced/vendor/symfony/finder" />
+      <excludeFolder url="file://$MODULE_DIR$/advanced/vendor/symfony/polyfill-ctype" />
+      <excludeFolder url="file://$MODULE_DIR$/advanced/vendor/symfony/polyfill-mbstring" />
+      <excludeFolder url="file://$MODULE_DIR$/advanced/vendor/symfony/yaml" />
+      <excludeFolder url="file://$MODULE_DIR$/advanced/vendor/theseer/tokenizer" />
+      <excludeFolder url="file://$MODULE_DIR$/advanced/vendor/webmozart/assert" />
+      <excludeFolder url="file://$MODULE_DIR$/advanced/vendor/yiisoft/yii2" />
+      <excludeFolder url="file://$MODULE_DIR$/advanced/vendor/yiisoft/yii2-bootstrap" />
+      <excludeFolder url="file://$MODULE_DIR$/advanced/vendor/yiisoft/yii2-composer" />
+      <excludeFolder url="file://$MODULE_DIR$/advanced/vendor/yiisoft/yii2-debug" />
+      <excludeFolder url="file://$MODULE_DIR$/advanced/vendor/yiisoft/yii2-faker" />
+      <excludeFolder url="file://$MODULE_DIR$/advanced/vendor/yiisoft/yii2-gii" />
+      <excludeFolder url="file://$MODULE_DIR$/advanced/vendor/yiisoft/yii2-swiftmailer" />
+      <excludeFolder url="file://$MODULE_DIR$/advanced/vendor/yurkinx/yii2-image" />
+    </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="module-library">
-      <library name="PHARS">
-        <CLASSES>
-          <root url="phar://$MODULE_DIR$/advanced/vendor/phpunit/phpunit/tests/_files/phpunit-example-extension/tools/phpunit.d/phpunit-example-extension-1.0.1.phar/" />
-          <root url="phar://$MODULE_DIR$/advanced/vendor/phar-io/manifest/tests/_fixture/test.phar/" />
-        </CLASSES>
-        <SOURCES>
-          <root url="phar://$MODULE_DIR$/advanced/vendor/phpunit/phpunit/tests/_files/phpunit-example-extension/tools/phpunit.d/phpunit-example-extension-1.0.1.phar/" />
-          <root url="phar://$MODULE_DIR$/advanced/vendor/phar-io/manifest/tests/_fixture/test.phar/" />
-        </SOURCES>
-      </library>
-    </orderEntry>
   </component>
 </module>

@@ -1,37 +1,36 @@
 <?php
 
 namespace common\models;
+
 use Yii;
-use yii\behaviors\TimestampBehavior;
-use yii\db\ActiveRecord;
-use yii\db\Expression;
-use yii\behaviors\BlameableBehavior;
-use yii\helpers\ArrayHelper;
 use yii\web\UploadedFile;
 
-
 /**
- * This is the model class for table "poster".
+ * This is the model class for table "Poster".
  *
  * @property int $po_id
- * @property int $po_id_auth
+ * @property int $po_id_user
  * @property string $po_title
  * @property string $po_description
  * @property string $po_image
- * @property int $po_id_city
  * @property int $po_id_categories
  * @property int $po_price
  * @property int $po_status
- * @property string $data_create
+ * @property string $po_data_create
+ * @property int $po_id_city
+ *
+ * @property Categories $poIdCategories
+ * @property City $poIdCity
+ * @property Profile $poIdUser
  */
-class Poster extends ActiveRecord
+class Poster extends \yii\db\ActiveRecord
 {
     /**
      * {@inheritdoc}
      */
     public static function tableName()
     {
-        return 'poster';
+        return 'Poster';
     }
 
     /**
@@ -40,15 +39,18 @@ class Poster extends ActiveRecord
     public function rules()
     {
         return [
-            [[ 'po_title', 'po_description', 'po_id_city', 'po_id_categories', 'po_price'], 'required'],
-            [['po_id_auth', 'po_id_city', 'po_id_categories', 'po_price', 'po_status'], 'integer'],
+            [['po_title', 'po_description', 'po_id_categories', 'po_price', ], 'required'],
+            [['po_id_user', 'po_id_categories', 'po_price','po_id_city'], 'default', 'value' => null],
+            [['po_id_user', 'po_id_categories', 'po_price', 'po_status', 'po_id_city'], 'integer'],
             [['po_data_create'], 'safe'],
-            [['po_title', 'po_description', 'po_image'], 'string', 'max' => 255],
-            [['po_image'], 'safe'],
-            [['po_image'], 'file', 'extensions'=>'jpg, gif, png'],
+            [['po_status'],'default','value'=>1],
+            [['po_title', 'po_image'], 'string', 'max' => 255],
+            [['po_description'], 'string', 'max' => 32],
+            [['po_id_categories'], 'exist', 'skipOnError' => true, 'targetClass' => Categories::className(), 'targetAttribute' => ['po_id_categories' => 'cat_id']],
+            [['po_id_city'], 'exist', 'skipOnError' => true, 'targetClass' => City::className(), 'targetAttribute' => ['po_id_city' => 'c_id']],
+            [['po_id_user'], 'exist', 'skipOnError' => true, 'targetClass' => Profile::className(), 'targetAttribute' => ['po_id_user' => 'p_user_id']],
         ];
     }
-
 
     /**
      * {@inheritdoc}
@@ -56,67 +58,48 @@ class Poster extends ActiveRecord
     public function attributeLabels()
     {
         return [
-            'po_id' => 'ID объявления',
-            'po_id_auth' => 'ID автора',
+            'po_id' => 'Po ID',
+            'po_id_user' => 'Id User',
             'po_title' => 'Заголовок',
             'po_description' => 'Описание',
-            'po_image' => 'Фотография',
-            'po_id_city' => 'Город',
+            'po_image' => 'Изображение',
             'po_id_categories' => 'Категория',
             'po_price' => 'Цена',
             'po_status' => 'Статус',
             'po_data_create' => 'Дата создания',
-        ];
-    }
-    public function behaviors()
-    {
-
-        return
-            [
-            [
-                'class' => BlameableBehavior::className(),
-                'createdByAttribute' => 'po_id_auth',
-                'updatedByAttribute' => 'po_id_auth',
-            ],
-            [
-                'class'=>TimestampBehavior::className(),
-                'createdAtAttribute'=>'po_data_create',
-                'updatedAtAttribute' => 'po_data_create',
-                'value'=>new Expression('NOW()'),
-
-            ],
+            'po_id_city' => 'Город',
         ];
     }
 
     /**
      * @return \yii\db\ActiveQuery
      */
-    public function getAuthor()
+    public function getPoIdCategories()
     {
-        return $this->hasOne(Profile::className(),['p_id_user'=>'po_id_auth']);
-
+        return $this->hasOne(Categories::className(), ['cat_id' => 'po_id_categories']);
     }
-    public function getCity()
-    {
-        return $this->hasOne(City::className(),['c_id'=>'po_id_city']);
 
-    }
-    public function getCategories()
+    /**
+     * @return \yii\db\ActiveQuery
+     */
+    public function getPoIdCity()
     {
-        return $this->hasOne(Categories::className(),['id'=>'po_id_categories']);
+        return $this->hasOne(City::className(), ['c_id' => 'po_id_city']);
+    }
+
+    /**
+     * @return \yii\db\ActiveQuery
+     */
+    public function getPoIdUser()
+    {
+        return $this->hasOne(Profile::className(), ['p_user_id' => 'po_id_user']);
     }
 
     public function afterDelete()
     {
-        @unlink(Yii::getAlias('@uploads') . '/images/banner/' . $this->po_image);
+        @unlink(Yii::getAlias('@uploads') . '/images/' . $this->po_image);
         parent::afterDelete();
     }
-
-
-    /**
-     * @param bool $insert
-     * @return bool
-     */
     public function beforeSave($insert)
     {
         if(!parent::beforeSave($insert)) {
@@ -142,15 +125,13 @@ class Poster extends ActiveRecord
 //            $image->resize('50','50', Yii\image\drivers\Image::INVERSE);
 //            $image->crope('50','50');
 //            $image->save($pathImage.$this->po_image);
-
-
-        } else {
+            $this->po_id_user =Yii::$app->user->getId();
+        }
+    else
+        {
             $this->po_image = $this->getOldAttribute('po_image');
         }
-
-        return true;
-
+        return parent::beforeSave($insert); // TODO: Change the autogenerated stub
     }
-
 }
 

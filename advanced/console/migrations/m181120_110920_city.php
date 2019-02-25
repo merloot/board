@@ -18,9 +18,9 @@ class m181120_110920_city extends Migration
             $tableOptions = 'CHARACTER SET utf8 COLLATE utf8_unicode_ci ENGINE=InnoDB';
         }
 
-        $this->createTable('{{%city}}', [
-            'id' => $this->primaryKey(),
-            'city' => $this->string()->notNull()->unique(),
+        $this->createTable('{{%City}}', [
+            'c_id' => $this->primaryKey(),
+            'c_name' => $this->string()->notNull()->unique(),
         ], $tableOptions);
 
     }
@@ -30,7 +30,7 @@ class m181120_110920_city extends Migration
      */
     public function down()
     {
-        $this->dropTable('{{%city}}');
+        $this->dropTable('{{%City}}');
     }
 
     /*

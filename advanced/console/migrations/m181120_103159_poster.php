@@ -18,19 +18,21 @@ class m181120_103159_poster extends Migration
             $tableOptions = 'CHARACTER SET utf8 COLLATE utf8_unicode_ci ENGINE=InnoDB';
         }
 
-        $this->createTable('{{%poster}}', [
-            'id' => $this->primaryKey(),
-            'id_auth'=>$this->integer()->notNull()->unique(),
-            'title' => $this->string()->notNull(),
-            'description' => $this->string(32)->notNull(),
-            'image'=>$this->string(),
-            'id_city' => $this->string()->notNull(),
-            'id_categories' => $this->integer()->unique()->notNull(),
-            'price' => $this->integer()->notNull(),
-            'status' => $this->smallInteger()->notNull()->defaultValue(1),
-            'data_create'=>$this->dateTime()->notNull(),
+        $this->createTable('{{%Poster}}', [
+            'po_id' => $this->primaryKey(),
+            'po_id_user'=>$this->integer()->notNull(),
+            'po_title' => $this->string()->notNull(),
+            'po_description' => $this->string(32)->notNull(),
+            'po_image'=>$this->string(),
+            'po_id_city' => $this->integer()->notNull(),
+            'po_id_categories' => $this->integer()->notNull(),
+            'po_price' => $this->integer()->notNull(),
+            'po_status' => $this->smallInteger()->notNull()->defaultValue(1),
+            'po_data_create'=>$this->dateTime()->notNull(),
 
         ], $tableOptions);
+
+
 
     }
 
@@ -39,7 +41,9 @@ class m181120_103159_poster extends Migration
      */
     public function down()
     {
-        $this->dropTable('{{%poster}}');
+        $this->dropTable('{{%Poster}}');
+
+
     }
 
     /*

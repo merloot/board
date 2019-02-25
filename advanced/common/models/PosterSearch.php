@@ -2,7 +2,6 @@
 
 namespace common\models;
 
-use Yii;
 use yii\base\Model;
 use yii\data\ActiveDataProvider;
 use common\models\Poster;
@@ -18,8 +17,8 @@ class PosterSearch extends Poster
     public function rules()
     {
         return [
-            [['po_id', 'po_id_auth', 'po_id_city', 'po_id_categories', 'po_price', 'po_status'], 'integer'],
-            [['po_title', 'po_description', 'po_image', 'data_create'], 'safe'],
+            [['po_id', 'po_id_user', 'po_id_categories', 'po_price', 'po_status', 'po_id_city'], 'integer'],
+            [['po_title', 'po_description', 'po_image', 'po_data_create'], 'safe'],
         ];
     }
 
@@ -60,17 +59,17 @@ class PosterSearch extends Poster
         // grid filtering conditions
         $query->andFilterWhere([
             'po_id' => $this->po_id,
-            'po_id_auth' => $this->po_id_auth,
-            'po_id_city' => $this->po_id_city,
+            'po_id_user' => $this->po_id_user,
             'po_id_categories' => $this->po_id_categories,
             'po_price' => $this->po_price,
             'po_status' => $this->po_status,
             'po_data_create' => $this->po_data_create,
+            'po_id_city' => $this->po_id_city,
         ]);
 
-        $query->andFilterWhere(['like', 'po_title', $this->po_title])
-            ->andFilterWhere(['like', 'po_description', $this->po_description])
-            ->andFilterWhere(['like', 'po_image', $this->po_image]);
+        $query->andFilterWhere(['ilike', 'po_title', $this->po_title])
+            ->andFilterWhere(['ilike', 'po_description', $this->po_description])
+            ->andFilterWhere(['ilike', 'po_image', $this->po_image]);
 
         return $dataProvider;
     }

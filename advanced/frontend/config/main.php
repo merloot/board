@@ -9,9 +9,12 @@ $params = array_merge(
 return [
     'id' => 'app-frontend',
     'basePath' => dirname(__DIR__),
-    'bootstrap' => ['log'],
+    'bootstrap' => ['log','gii'],
     'controllerNamespace' => 'frontend\controllers',
     'modules' => [
+        'gii'=>[
+            'class'=>'yii\gii\Module'
+        ],
         'yii2images' => [
             'class' => 'rico\yii2images\Module',
             //be sure, that permissions ok
@@ -52,7 +55,7 @@ return [
             'enablePrettyUrl' => true,
             'showScriptName' => false,
             'rules' => [
-//                'poster/<po_id>'=>'site/one',
+                'poster/one/<po_id>'=>'poster/one',
             ],
         ],
     ],
