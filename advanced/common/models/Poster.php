@@ -3,6 +3,7 @@
 namespace common\models;
 
 use Yii;
+use yii\db\Query;
 use yii\web\UploadedFile;
 
 /**
@@ -90,6 +91,13 @@ class Poster extends \yii\db\ActiveRecord
     /**
      * @return \yii\db\ActiveQuery
      */
+
+    public function count()
+    {
+//        return Query::find()->where(['po_id_user'=>'p_user_id'])->count();
+        return Poster::find()->where(['po_id_user'=>'p_user_id'])->count();
+    }
+
     public function getPoIdUser()
     {
         return $this->hasOne(Profile::className(), ['p_user_id' => 'po_id_user']);
@@ -97,7 +105,7 @@ class Poster extends \yii\db\ActiveRecord
 
     public function afterDelete()
     {
-        @unlink(Yii::getAlias('@uploads') . '/images/' . $this->po_image);
+        @unlink(Yii::getAlias('@images') . '/images/' . $this->po_image);
         parent::afterDelete();
     }
     public function beforeSave($insert)

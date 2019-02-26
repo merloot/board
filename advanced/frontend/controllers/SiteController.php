@@ -2,6 +2,7 @@
 namespace frontend\controllers;
 
 use common\models\Poster;
+use common\models\Profile;
 use Yii;
 use yii\base\InvalidParamException;
 use yii\web\BadRequestHttpException;
@@ -12,6 +13,7 @@ use common\models\LoginForm;
 use frontend\models\PasswordResetRequestForm;
 use frontend\models\ResetPasswordForm;
 use frontend\models\SignupForm;
+
 
 
 /**
@@ -121,13 +123,15 @@ class SiteController extends Controller
      *
      * @return mixed
      */
+
     public function actionSignup()
     {
         $model = new SignupForm();
         if ($model->load(Yii::$app->request->post())) {
             if ($user = $model->signup()) {
                 if (Yii::$app->getUser()->login($user)) {
-                    return $this->goHome();
+//                    return $this->redirect('/profile/create');
+                    return Yii::$app->response->redirect('http://localhost/board/public_html/profile/create');
                 }
             }
         }

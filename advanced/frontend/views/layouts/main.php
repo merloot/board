@@ -58,17 +58,9 @@ AppAsset::register($this);
             . Html::endForm()
             . '</li>';
         $menuItems[] = '<li>'
-            . Html::beginForm()
+            . Html::beginForm(['/profile/view'],'post')
             . Html::submitButton(
                 'Личный кабинет',
-                ['class' => 'btn btn-link logout']
-            )
-            . Html::endForm()
-            . '</li>';
-        $menuItems[] = '<li>'
-            . Html::beginForm(['/profile/create'], 'post')
-            . Html::submitButton(
-                'Создать личный кабинет',
                 ['class' => 'btn btn-link logout']
             )
             . Html::endForm()

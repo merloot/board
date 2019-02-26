@@ -56,6 +56,7 @@ return [
             'showScriptName' => false,
             'rules' => [
                 'poster/one/<po_id>'=>'poster/one',
+
             ],
         ],
     ],
