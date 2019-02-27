@@ -91,12 +91,12 @@ class Poster extends \yii\db\ActiveRecord
     /**
      * @return \yii\db\ActiveQuery
      */
-
-    public function count()
-    {
-//        return Query::find()->where(['po_id_user'=>'p_user_id'])->count();
-        return Poster::find()->where(['po_id_user'=>'p_user_id'])->count();
-    }
+//
+//    public function count()
+//    {
+////        return Query::find()->where(['po_id_user'=>'p_user_id'])->count();
+//        return Poster::find()->where(['po_id_user'=>'p_user_id'])->count();
+//    }
 
     public function getPoIdUser()
     {
