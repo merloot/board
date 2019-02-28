@@ -11,7 +11,7 @@ use yii\bootstrap\Html;
 <p><?=$poster->po_description?></p>
 <p>Имя:<?=$poster->poIdUser->p_name?></p>
 <p>На сайте с:<?=$poster->poIdUser->pUser->data_create?></p>
-<p>Объявлений: <?=$poster->poIdUser->countPoster?></p>
+<p>Объявлений: <?=$poster->poIdUser->count?></p>
 <p>Телефон:<?=$poster->poIdUser->p_phone?></p>
 <?=Html::img('../../uploads/avatar/'.$poster->poIdUser->p_image)?>
 

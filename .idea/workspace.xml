@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="55250fb3-0ca5-4e80-b4a8-8874e2c3dce6" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/advanced/common/models/Poster.php" beforeDir="false" afterPath="$PROJECT_DIR$/advanced/common/models/Poster.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/advanced/common/models/Profile.php" beforeDir="false" afterPath="$PROJECT_DIR$/advanced/common/models/Profile.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/advanced/frontend/views/poster/one.php" beforeDir="false" afterPath="$PROJECT_DIR$/advanced/frontend/views/poster/one.php" afterDir="false" />
@@ -18,50 +17,44 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/advanced/frontend/views/poster/one.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="12" column="60" selection-start-line="12" selection-start-column="60" selection-end-line="12" selection-end-column="60" />
+            <state relative-caret-position="195">
+              <caret line="13" column="28" selection-start-line="13" selection-start-column="28" selection-end-line="13" selection-end-column="28" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/advanced/frontend/views/poster/update.php">
+        <entry file="file://$PROJECT_DIR$/advanced/common/models/Profile.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="315">
-              <caret line="21" selection-start-line="21" selection-end-line="21" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/advanced/frontend/views/poster/_form.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="15" selection-start-line="15" selection-end-line="61" selection-end-column="6" />
+            <state relative-caret-position="784">
+              <caret line="114" column="67" selection-start-line="114" selection-start-column="67" selection-end-line="114" selection-end-column="67" />
               <folding>
-                <element signature="e#7#36#0#PHP" expanded="true" />
+                <element signature="e#33#41#0#PHP" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/advanced/frontend/config/main.php">
+        <entry file="file://$PROJECT_DIR$/advanced/common/models/Poster.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="870">
-              <caret line="58" selection-start-line="58" selection-end-line="58" />
+            <state relative-caret-position="64">
+              <caret line="94" column="31" selection-start-line="94" selection-start-column="23" selection-end-line="94" selection-end-column="31" />
+              <folding>
+                <element signature="e#33#41#0#PHP" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/advanced/common/config/bootstrap.php">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/advanced/common/config/main-local.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="75">
-              <caret line="5" column="22" selection-start-line="5" selection-start-column="16" selection-end-line="5" selection-end-column="22" />
+              <caret line="5" column="55" selection-start-line="5" selection-start-column="55" selection-end-line="5" selection-end-column="55" />
             </state>
           </provider>
         </entry>
@@ -135,10 +128,10 @@
         <option value="$PROJECT_DIR$/advanced/frontend/controllers/SiteController.php" />
         <option value="$PROJECT_DIR$/advanced/frontend/views/layouts/main.php" />
         <option value="$PROJECT_DIR$/advanced/common/config/bootstrap.php" />
-        <option value="$PROJECT_DIR$/advanced/common/models/Poster.php" />
         <option value="$PROJECT_DIR$/advanced/frontend/views/poster/update.php" />
-        <option value="$PROJECT_DIR$/advanced/common/models/Profile.php" />
+        <option value="$PROJECT_DIR$/advanced/common/models/Poster.php" />
         <option value="$PROJECT_DIR$/advanced/frontend/views/poster/one.php" />
+        <option value="$PROJECT_DIR$/advanced/common/models/Profile.php" />
       </list>
     </option>
   </component>
@@ -217,8 +210,8 @@
       <path value="$PROJECT_DIR$/advanced/vendor/kartik-v/bootstrap-fileinput" />
     </include_path>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="361" />
+  <component name="ProjectFrameBounds" extendedState="7">
+    <option name="x" value="1193" />
     <option name="y" value="28" />
     <option name="width" value="954" />
     <option name="height" value="1024" />
@@ -276,71 +269,6 @@
               <item name="advanced" type="462c0819:PsiDirectoryNode" />
               <item name="common" type="462c0819:PsiDirectoryNode" />
               <item name="config" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="board" type="b2602c69:ProjectViewProjectNode" />
-              <item name="board" type="462c0819:PsiDirectoryNode" />
-              <item name="advanced" type="462c0819:PsiDirectoryNode" />
-              <item name="common" type="462c0819:PsiDirectoryNode" />
-              <item name="models" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="board" type="b2602c69:ProjectViewProjectNode" />
-              <item name="board" type="462c0819:PsiDirectoryNode" />
-              <item name="advanced" type="462c0819:PsiDirectoryNode" />
-              <item name="frontend" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="board" type="b2602c69:ProjectViewProjectNode" />
-              <item name="board" type="462c0819:PsiDirectoryNode" />
-              <item name="advanced" type="462c0819:PsiDirectoryNode" />
-              <item name="frontend" type="462c0819:PsiDirectoryNode" />
-              <item name="config" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="board" type="b2602c69:ProjectViewProjectNode" />
-              <item name="board" type="462c0819:PsiDirectoryNode" />
-              <item name="advanced" type="462c0819:PsiDirectoryNode" />
-              <item name="frontend" type="462c0819:PsiDirectoryNode" />
-              <item name="controllers" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="board" type="b2602c69:ProjectViewProjectNode" />
-              <item name="board" type="462c0819:PsiDirectoryNode" />
-              <item name="advanced" type="462c0819:PsiDirectoryNode" />
-              <item name="frontend" type="462c0819:PsiDirectoryNode" />
-              <item name="models" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="board" type="b2602c69:ProjectViewProjectNode" />
-              <item name="board" type="462c0819:PsiDirectoryNode" />
-              <item name="advanced" type="462c0819:PsiDirectoryNode" />
-              <item name="frontend" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="board" type="b2602c69:ProjectViewProjectNode" />
-              <item name="board" type="462c0819:PsiDirectoryNode" />
-              <item name="advanced" type="462c0819:PsiDirectoryNode" />
-              <item name="frontend" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="layouts" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="board" type="b2602c69:ProjectViewProjectNode" />
-              <item name="board" type="462c0819:PsiDirectoryNode" />
-              <item name="advanced" type="462c0819:PsiDirectoryNode" />
-              <item name="frontend" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="poster" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="board" type="b2602c69:ProjectViewProjectNode" />
-              <item name="board" type="462c0819:PsiDirectoryNode" />
-              <item name="advanced" type="462c0819:PsiDirectoryNode" />
-              <item name="frontend" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="site" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -409,17 +337,18 @@
       <workItem from="1550995515535" duration="13774000" />
       <workItem from="1551067780504" duration="37391000" />
       <workItem from="1551239778517" duration="1245000" />
+      <workItem from="1551333326144" duration="10444000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="143951000" />
+    <option name="totallyTimeSpent" value="154395000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-2" y="29" width="1924" height="1029" extended-state="6" />
+    <frame x="-2" y="29" width="1924" height="1029" extended-state="7" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.18996799" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.19210246" />
       <window_info id="Structure" order="1" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Database Changes" order="0" />
@@ -439,27 +368,6 @@
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Database" order="3" />
     </layout>
-    <layout-to-restore>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.18783352" />
-      <window_info id="Structure" order="1" weight="0.25" />
-      <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="Database Changes" order="0" />
-      <window_info anchor="bottom" id="Docker" order="1" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Message" order="2" />
-      <window_info anchor="bottom" id="Find" order="3" weight="0.32942554" />
-      <window_info anchor="bottom" id="Run" order="4" />
-      <window_info anchor="bottom" id="Debug" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="6" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="7" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="8" />
-      <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
-      <window_info anchor="bottom" id="Terminal" order="10" weight="0.32924107" />
-      <window_info anchor="bottom" id="Version Control" order="11" />
-      <window_info anchor="right" id="Commander" order="0" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Database" order="3" />
-    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
@@ -468,13 +376,6 @@
     <option name="LAST_COMMIT_MESSAGE" value="" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/advanced/init">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="28" column="18" selection-start-line="28" selection-start-column="16" selection-end-line="28" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/advanced/vendor/yiisoft/yii2/web/UploadedFile.php" />
     <entry file="file://$PROJECT_DIR$/advanced/frontend/views/poster/all.php" />
     <entry file="file://$PROJECT_DIR$/advanced/common/models/Categories.php">
@@ -531,13 +432,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="544">
           <caret line="40" column="7" selection-start-line="40" selection-start-column="5" selection-end-line="40" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/advanced/common/config/main-local.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="55" selection-start-line="5" selection-start-column="55" selection-end-line="5" selection-end-column="55" />
         </state>
       </provider>
     </entry>
@@ -756,12 +650,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/advanced/common/models/Poster.php">
+    <entry file="file://$PROJECT_DIR$/advanced/frontend/views/poster/_form.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1365">
-          <caret line="93" selection-start-line="93" selection-start-column="2" selection-end-line="98" selection-end-column="7" />
+        <state relative-caret-position="225">
+          <caret line="15" selection-start-line="15" selection-end-line="61" selection-end-column="6" />
           <folding>
-            <element signature="e#33#41#0#PHP" expanded="true" />
+            <element signature="e#7#36#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -773,12 +667,26 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/advanced/frontend/views/poster/_form.php">
+    <entry file="file://$PROJECT_DIR$/advanced/common/config/bootstrap.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="15" selection-start-line="15" selection-end-line="61" selection-end-column="6" />
+        <state relative-caret-position="75">
+          <caret line="5" column="22" selection-start-line="5" selection-start-column="16" selection-end-line="5" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/advanced/frontend/views/poster/one.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="13" column="28" selection-start-line="13" selection-start-column="28" selection-end-line="13" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/advanced/common/models/Profile.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="784">
+          <caret line="114" column="67" selection-start-line="114" selection-start-column="67" selection-end-line="114" selection-end-column="67" />
           <folding>
-            <element signature="e#7#36#0#PHP" expanded="true" />
+            <element signature="e#33#41#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -790,27 +698,23 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/advanced/common/config/bootstrap.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="22" selection-start-line="5" selection-start-column="16" selection-end-line="5" selection-end-column="22" />
-        </state>
-      </provider>
+    <entry file="file://$PROJECT_DIR$/advanced/frontend/config/params.php">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/advanced/common/models/Profile.php">
+    <entry file="file://$PROJECT_DIR$/advanced/common/models/Poster.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="439">
-          <caret line="113" selection-start-line="113" selection-end-line="113" />
+        <state relative-caret-position="64">
+          <caret line="94" column="31" selection-start-line="94" selection-start-column="23" selection-end-line="94" selection-end-column="31" />
           <folding>
             <element signature="e#33#41#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/advanced/frontend/views/poster/one.php">
+    <entry file="file://$PROJECT_DIR$/advanced/common/config/main-local.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="60" selection-start-line="12" selection-start-column="60" selection-end-line="12" selection-end-column="60" />
+        <state relative-caret-position="75">
+          <caret line="5" column="55" selection-start-line="5" selection-start-column="55" selection-end-line="5" selection-end-column="55" />
         </state>
       </provider>
     </entry>
