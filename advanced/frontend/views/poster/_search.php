@@ -2,6 +2,10 @@
 
 use yii\helpers\Html;
 use yii\widgets\ActiveForm;
+use kartik\select2\Select2;
+use yii\helpers\ArrayHelper;
+use common\models\City;
+use common\models\Categories;
 
 /* @var $this yii\web\View */
 /* @var $model common\models\PosterSearch */
@@ -18,29 +22,33 @@ use yii\widgets\ActiveForm;
         ],
     ]); ?>
 
-    <?= $form->field($model, 'po_id') ?>
+    <?=$form->field($model, 'po_id_city')->widget(Select2::classname(), [
+        'data' => ArrayHelper::map(City::find()->all(),'c_id','c_name'),
+        'language' => 'ru',
+        'options' => ['placeholder' => 'Выберите город'],
+        'pluginOptions' => [
+            'allowClear' => true
+        ],
+    ]);?>
 
-    <?= $form->field($model, 'po_id_user') ?>
 
-    <?= $form->field($model, 'po_title') ?>
+    <?=$form->field($model, 'po_id_categories')->widget(Select2::classname(), [
+        'data' => ArrayHelper::map(Categories::find()->all(),'cat_id','cat_name'),
+        'language' => 'ru',
+        'options' => ['placeholder' => 'Выберите категорию'],
+        'pluginOptions' => [
+            'allowClear' => true
+        ],
+    ]);?>
 
-    <?= $form->field($model, 'po_description') ?>
-
-    <?= $form->field($model, 'po_image') ?>
-
-    <?php // echo $form->field($model, 'po_id_city') ?>
-
-    <?php // echo $form->field($model, 'po_id_categories') ?>
-
-    <?php // echo $form->field($model, 'po_price') ?>
+<!--    --><?php // echo $form->field($model, 'po_price') ?>
 
     <?php // echo $form->field($model, 'po_status') ?>
 
     <?php // echo $form->field($model, 'po_data_create') ?>
 
     <div class="form-group">
-        <?= Html::submitButton('Search', ['class' => 'btn btn-primary']) ?>
-        <?= Html::resetButton('Reset', ['class' => 'btn btn-default']) ?>
+        <?= Html::submitButton('Поиск', ['class' => 'btn btn-primary']) ?>
     </div>
 
     <?php ActiveForm::end(); ?>

@@ -14,7 +14,7 @@ $this->params['breadcrumbs'][] = $this->title;
 
     <h1><?= Html::encode($this->title) ?></h1>
     <?php Pjax::begin(); ?>
-    <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
+    <?php  echo $this->render('_search', ['model' => $searchModel]); ?>
 
     <p>
         <?= Html::a('Create Poster', ['create'], ['class' => 'btn btn-success']) ?>
@@ -25,16 +25,12 @@ $this->params['breadcrumbs'][] = $this->title;
         'filterModel' => $searchModel,
         'columns' => [
             ['class' => 'yii\grid\SerialColumn'],
-//            'po_id',
 //            'po_id_user',
             'po_title',
             'po_description',
             'po_image',
-            //'po_id_city',
-            //'po_id_categories',
             'po_price',
-            //'po_status',
-            //'po_data_create',
+            'po_data_create',
 
             ['class' => 'yii\grid\ActionColumn'],
         ],

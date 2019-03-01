@@ -112,10 +112,9 @@ class Profile extends \yii\db\ActiveRecord
     public function getCount()
     {
 
-        $test=Poster::find()->where(['po_id_user'=>$this->p_user_id])->count('po_id_user');
+        return Poster::find()->where(['po_id_user'=>$this->p_user_id])->count('po_id_user');
 
-        var_dump($test);
-        die();
+//        var_dump($test);
     }
     public function getPosters()
     {

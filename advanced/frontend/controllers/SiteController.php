@@ -2,6 +2,7 @@
 namespace frontend\controllers;
 
 use common\models\Poster;
+use common\models\PosterSearch;
 use common\models\Profile;
 use Yii;
 use yii\base\InvalidParamException;
@@ -76,10 +77,26 @@ class SiteController extends Controller
 
         public function actionIndex()
         {
-        $posters= Poster::find()->andWhere(['po_status'=>1])->all();
-        return $this->render('all',['posters'=>$posters]);
+
+            $searchModel = new PosterSearch();
+            $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
+
+
+            $posters= $dataProvider->query->andWhere(['po_status'=>1])->orderBy('po_data_create')->all();
+        return $this->render('all',['posters'=>$posters, 'searchModel' => $searchModel]);
         }
 
+        public function actionPoster_profile()
+        {
+            $posters = Poster::find()->andWhere(['po_id_user'=>Yii::$app->user->getId()])->all();
+            return $this->render('poster_profile',['posters'=>$posters]);
+        }
+
+        public function actionUser_profile()
+        {
+            $profile = Profile::find()->andWhere(['p_user_id'=>Yii::$app->user->getId()])->one();
+            return $this->render('user_profile',['profile'=>$profile]);
+        }
 
 
     /**

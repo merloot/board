@@ -28,13 +28,6 @@ class PosterController extends Controller
                     'delete' => ['POST'],
                 ],
             ],
-            'timestamp'=>[
-                'class'=>TimestampBehavior::className(),
-                'createdAtAttribute'=>'po_data_create',
-                'updatedAtAttribute' => 'po_data_create',
-                'value'=>new Expression('NOW()'),
-
-            ]
         ];
     }
 

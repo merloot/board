@@ -1,5 +1,6 @@
 <?php
 use yii\bootstrap\Html;
+
 ?>
 
 <h1><?=$poster->po_title?></h1>

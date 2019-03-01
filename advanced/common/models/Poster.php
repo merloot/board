@@ -5,6 +5,8 @@ namespace common\models;
 use Yii;
 use yii\db\Query;
 use yii\web\UploadedFile;
+use yii\behaviors\TimestampBehavior;
+use yii\db\Expression;
 
 /**
  * This is the model class for table "Poster".
@@ -34,6 +36,19 @@ class Poster extends \yii\db\ActiveRecord
         return 'Poster';
     }
 
+
+    public function behaviors()
+    {
+        return[
+            [
+                'class'=>TimestampBehavior::className(),
+                'createdAtAttribute'=>'po_data_create',
+                'updatedAtAttribute'=>'po_data_create',
+                'value'=>new Expression('NOW()'),
+            ],
+        ];
+    }
+
     /**
      * {@inheritdoc}
      */
@@ -46,7 +61,7 @@ class Poster extends \yii\db\ActiveRecord
             [['po_data_create'], 'safe'],
             [['po_status'],'default','value'=>1],
             [['po_title', 'po_image'], 'string', 'max' => 255],
-            [['po_description'], 'string', 'max' => 32],
+            [['po_description'], 'string', 'max' => 255],
             [['po_id_categories'], 'exist', 'skipOnError' => true, 'targetClass' => Categories::className(), 'targetAttribute' => ['po_id_categories' => 'cat_id']],
             [['po_id_city'], 'exist', 'skipOnError' => true, 'targetClass' => City::className(), 'targetAttribute' => ['po_id_city' => 'c_id']],
             [['po_id_user'], 'exist', 'skipOnError' => true, 'targetClass' => Profile::className(), 'targetAttribute' => ['po_id_user' => 'p_user_id']],
