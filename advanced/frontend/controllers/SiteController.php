@@ -1,11 +1,14 @@
 <?php
 namespace frontend\controllers;
 
+
 use common\models\Poster;
+use common\models\PosterProfileSearch;
 use common\models\PosterSearch;
 use common\models\Profile;
 use Yii;
 use yii\base\InvalidParamException;
+use yii\data\Pagination;
 use yii\web\BadRequestHttpException;
 use yii\web\Controller;
 use yii\filters\VerbFilter;
@@ -81,15 +84,23 @@ class SiteController extends Controller
             $searchModel = new PosterSearch();
             $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
 
+            $pages = new Pagination(['totalCount' => $dataProvider->query->count(),'pageSize'=>6]);
 
-            $posters= $dataProvider->query->andWhere(['po_status'=>1])->orderBy('po_data_create')->all();
-        return $this->render('all',['posters'=>$posters, 'searchModel' => $searchModel]);
+
+            $posters= $dataProvider->query->offset($pages->offset)->limit($pages->limit)->andWhere(['po_status'=>1])->orderBy('po_data_create')->all();
+            return $this->render('all',['posters'=>$posters, 'searchModel' => $searchModel,'pages'=>$pages]);
         }
 
         public function actionPoster_profile()
         {
-            $posters = Poster::find()->andWhere(['po_id_user'=>Yii::$app->user->getId()])->all();
-            return $this->render('poster_profile',['posters'=>$posters]);
+            $searchModel = new PosterProfileSearch();
+            $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
+
+            $pages = new Pagination(['totalCount' => $dataProvider->query->count(),'pageSize'=>6]);
+
+
+            $posters = $dataProvider->query->offset($pages->offset)->limit($pages->limit)->andWhere(['po_id_user'=>Yii::$app->user->getId()])->all();
+            return $this->render('poster_profile',['posters'=>$posters,'searchModel'=>$searchModel,'pages'=>$pages]);
         }
 
         public function actionUser_profile()

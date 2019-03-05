@@ -14,30 +14,59 @@ use kartik\select2\Select2;
 use common\models\Categories;
 use common\models\City;
 use common\models\PosterSearch;
-
+use yii\widgets\LinkPager;
 ?>
 <div class="site-index">
     <?php echo $this->render('/poster/_search', ['model' => $searchModel]) ?>
-
-
 
     <div class="jumbotron">
         <h1>Актуальные объявления</h1>
     </div>
 
-    <div class="body-content">
+    <div class="body-content container">
         <div class="row">
-            <div class="col-lg-4">
-                <?php foreach ($posters as $one):?>
-                    <div class="col-lg-4">
-                        <?= Html::img('../uploads/images/'.$one->po_image) ?>
-                        <?= Html::img('uploads/images/'.$one->po_image) ?>
+
+            <?php foreach ($posters as $one):?>
+                <div class="post col-lg-4 mb-5">
+                    <div class="div-img"><?= Html::img('../uploads/images/'.$one->po_image) ?></div>
+                    <div class="div-img"><?= Html::img('uploads/images/'.$one->po_image) ?></div>
+                    <div class="post-about">
                         <h3><?= yii\bootstrap\Html::a($one->po_title,['poster/one','po_id'=>$one->po_id])?></h3>
                         <p>Цена: <?=$one->po_price?> Руб </p>
                         <p>Дата публикации: <?=$one->po_data_create?></p>
                     </div>
-                <?php endforeach?>
+                </div>
+            <?php endforeach?>
 
-            </div>
+        </div>
+        <div>
+            <?= LinkPager::widget([
+                'pagination' => $pages,
+            ]); ?>
         </div>
     </div>
+
+    <style>
+        .post{
+            height: 300px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .post-about{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+        .div-img img{
+            max-height: 150px;
+            max-width: 200px;
+        }
+        h1{
+            margin-top: -50px;
+            margin-bottom: -40px;
+        }
+    </style>

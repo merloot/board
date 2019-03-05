@@ -4,7 +4,6 @@ use yii\helpers\Html;
 use yii\widgets\ActiveForm;
 use kartik\select2\Select2;
 use yii\helpers\ArrayHelper;
-use common\models\City;
 use common\models\Categories;
 
 /* @var $this yii\web\View */
@@ -15,7 +14,7 @@ use common\models\Categories;
 <div class="poster-search">
 
     <?php $form = ActiveForm::begin([
-        'action' => ['index'],
+        'action' => ['poster_profile'],
         'method' => 'get',
         'options' => [
             'data-pjax' => 1
@@ -23,13 +22,11 @@ use common\models\Categories;
     ]); ?>
     <div class="row form-group">
         <div>
-            <?=$form->field($model, 'po_id_city')->widget(Select2::classname(), [
-                'data' => ArrayHelper::map(City::find()->all(),'c_id','c_name'),
-                'language' => 'ru',
-                'options' => ['placeholder' => 'Выберите город'],
-                'pluginOptions' => [
-                    'allowClear' => true
-                ],
+
+            <?php  echo $form->field($model, 'po_status')->dropDownList([
+                1=> 'Активное',
+                2 => 'Закрытое',
+                ''=> 'Все',
             ]);?>
 
 
@@ -50,21 +47,22 @@ use common\models\Categories;
 
 
 <style>
-    .row div{
-        margin-bottom: 0;
-        display: flex;
-        justify-content: center;
-    }
-    .row div div{
-        display: flex;
-        align-items: center;
-    }
-    .row div div label{
-        margin-left: 10px;
-        margin-right: 10px;
-    }
-    .btn-primary{
-        margin-left: 10px;
-        height: 35px;
-    }
+        .row div{
+            margin-bottom: 0;
+            display: flex;
+            justify-content: center;
+        }
+        .row div div{
+            display: flex;
+            align-items: center;
+        }
+        .row div div label{
+            margin-left: 10px;
+            margin-right: 10px;
+        }
+        .btn-primary{
+            margin-left: 10px;
+            height: 35px;
+        }
 </style>
+

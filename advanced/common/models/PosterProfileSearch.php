@@ -5,12 +5,11 @@ namespace common\models;
 use yii\base\Model;
 use yii\data\ActiveDataProvider;
 use common\models\Poster;
-use yii\data\Pagination;
 
 /**
  * PosterSearch represents the model behind the search form of `common\models\Poster`.
  */
-class PosterSearch extends Poster
+class PosterProfileSearch extends Poster
 {
     /**
      * {@inheritdoc}
@@ -42,6 +41,7 @@ class PosterSearch extends Poster
     public function search($params)
     {
         $query = Poster::find();
+
         // add conditions that should always apply here
 
         $dataProvider = new ActiveDataProvider([

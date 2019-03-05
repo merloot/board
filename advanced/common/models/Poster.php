@@ -3,7 +3,6 @@
 namespace common\models;
 
 use Yii;
-use yii\db\Query;
 use yii\web\UploadedFile;
 use yii\behaviors\TimestampBehavior;
 use yii\db\Expression;
@@ -112,6 +111,12 @@ class Poster extends \yii\db\ActiveRecord
         return $this->hasOne(Profile::className(), ['p_user_id' => 'po_id_user']);
     }
 
+    public function save($runValidation = true, $attributeNames = null)
+    {
+        if ($this->getIsNewRecord()) {
+            return $this->insert(0, $this->po_status);
+        }
+    }
 
     public function afterDelete()
     {
