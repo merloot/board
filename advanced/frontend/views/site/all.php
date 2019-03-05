@@ -8,12 +8,6 @@
 /* @var $this yii\web\View */
 /* @var $posters common\models\Poster*/
 use yii\bootstrap\Html;
-use yii\widgets\ActiveForm;
-use yii\helpers\ArrayHelper;
-use kartik\select2\Select2;
-use common\models\Categories;
-use common\models\City;
-use common\models\PosterSearch;
 use yii\widgets\LinkPager;
 ?>
 <div class="site-index">
@@ -47,6 +41,12 @@ use yii\widgets\LinkPager;
     </div>
 
     <style>
+        .show{
+            display: block;
+        }
+        .hide{
+            display: none;
+        }
         .post{
             height: 300px;
             display: flex;

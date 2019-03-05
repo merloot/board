@@ -7,8 +7,8 @@ use yii\widgets\Pjax;
 /* @var $searchModel common\models\PosterSearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
-$this->title = 'Posters';
-$this->params['breadcrumbs'][] = $this->title;
+//$this->title = 'Posters';
+//$this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="poster-index">
 

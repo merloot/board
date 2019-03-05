@@ -52,6 +52,12 @@ use kartik\file\FileInput;
             'allowClear' => true
         ],
     ]);?>
+
+    <?=$form->field($model,'po_status')->dropDownList([
+        1=>'Активное',
+        2=>'Закрытое',
+    ]);?>
+
     <?= $form->field($model, 'po_price')->textInput() ?>
     <div class="form-group">
         <?= Html::submitButton('Добавить', ['class' => 'btn btn-success']) ?>

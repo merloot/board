@@ -5,11 +5,9 @@ namespace frontend\controllers;
 use Yii;
 use common\models\Poster;
 use common\models\PosterSearch;
-use yii\behaviors\TimestampBehavior;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
-use yii\db\Expression;
 
 /**
  * PosterController implements the CRUD actions for Poster model.
@@ -98,7 +96,6 @@ class PosterController extends Controller
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
             return $this->redirect(['view', 'id' => $model->po_id]);
         }
-
         return $this->render('update', [
             'model' => $model,
         ]);

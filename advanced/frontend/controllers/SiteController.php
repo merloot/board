@@ -2,7 +2,6 @@
 namespace frontend\controllers;
 
 
-use common\models\Poster;
 use common\models\PosterProfileSearch;
 use common\models\PosterSearch;
 use common\models\Profile;
