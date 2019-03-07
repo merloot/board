@@ -5,11 +5,7 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/advanced/frontend/controllers/PosterController.php" beforeDir="false" afterPath="$PROJECT_DIR$/advanced/frontend/controllers/PosterController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/advanced/frontend/controllers/SiteController.php" beforeDir="false" afterPath="$PROJECT_DIR$/advanced/frontend/controllers/SiteController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/advanced/frontend/views/poster/_form.php" beforeDir="false" afterPath="$PROJECT_DIR$/advanced/frontend/views/poster/_form.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/advanced/frontend/views/poster/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/advanced/frontend/views/poster/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/advanced/frontend/views/poster/update.php" beforeDir="false" afterPath="$PROJECT_DIR$/advanced/frontend/views/poster/update.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/advanced/frontend/views/site/all.php" beforeDir="false" afterPath="$PROJECT_DIR$/advanced/frontend/views/site/all.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/advanced/frontend/views/site/poster_profile.php" beforeDir="false" afterPath="$PROJECT_DIR$/advanced/frontend/views/site/poster_profile.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/advanced/frontend/views/site/user_profile.php" beforeDir="false" afterPath="$PROJECT_DIR$/advanced/frontend/views/site/user_profile.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -23,33 +19,24 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/advanced/frontend/views/site/all.php">
+        <entry file="file://$PROJECT_DIR$/advanced/common/models/Poster.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="9" column="23" selection-start-line="9" selection-start-column="23" selection-end-line="9" selection-end-column="23" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/advanced/frontend/controllers/PosterController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1140">
-              <caret line="97" column="9" lean-forward="true" selection-start-line="97" selection-start-column="9" selection-end-line="97" selection-end-column="9" />
+            <state relative-caret-position="-1110">
+              <caret line="19" column="26" selection-start-line="19" selection-start-column="18" selection-end-line="19" selection-end-column="26" />
               <folding>
-                <element signature="e#40#48#0#PHP" expanded="true" />
+                <element signature="e#33#41#0#PHP" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/advanced/frontend/controllers/SiteController.php">
+        <entry file="file://$PROJECT_DIR$/advanced/frontend/controllers/PosterController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="409">
-              <caret line="91" lean-forward="true" selection-start-line="79" selection-start-column="8" selection-end-line="91" />
+            <state relative-caret-position="285">
+              <caret line="55" column="8" selection-start-line="55" selection-start-column="8" selection-end-line="55" selection-end-column="8" />
               <folding>
-                <element signature="e#40#78#0#PHP" expanded="true" />
+                <element signature="e#40#48#0#PHP" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -108,12 +95,9 @@
         <option value="$PROJECT_DIR$/advanced/frontend/views/profile/view.php" />
         <option value="$PROJECT_DIR$/advanced/frontend/models/SignupForm.php" />
         <option value="$PROJECT_DIR$/advanced/common/config/bootstrap.php" />
-        <option value="$PROJECT_DIR$/advanced/frontend/views/site/one.php" />
         <option value="$PROJECT_DIR$/advanced/frontend/config/main.php" />
         <option value="$PROJECT_DIR$/advanced/frontend/views/layouts/main.php" />
-        <option value="$PROJECT_DIR$/advanced/frontend/views/site/user_profile.php" />
         <option value="$PROJECT_DIR$/advanced/frontend/views/profile/update.php" />
-        <option value="$PROJECT_DIR$/advanced/common/models/Profile.php" />
         <option value="$PROJECT_DIR$/advanced/common/models/Poster.php" />
         <option value="$PROJECT_DIR$/advanced/frontend/views/site/index.php" />
         <option value="$PROJECT_DIR$/advanced/frontend/views/poster/one.php" />
@@ -121,14 +105,17 @@
         <option value="$PROJECT_DIR$/advanced/frontend/views/poster/_search_profile.php" />
         <option value="$PROJECT_DIR$/advanced/common/models/PosterProfileSearch.php" />
         <option value="$PROJECT_DIR$/advanced/common/models/PosterSearch.php" />
-        <option value="$PROJECT_DIR$/advanced/frontend/controllers/SiteController.php" />
         <option value="$PROJECT_DIR$/advanced/frontend/views/profile/_form.php" />
         <option value="$PROJECT_DIR$/advanced/frontend/views/poster/_form.php" />
         <option value="$PROJECT_DIR$/advanced/frontend/views/poster/index.php" />
-        <option value="$PROJECT_DIR$/advanced/frontend/controllers/PosterController.php" />
         <option value="$PROJECT_DIR$/advanced/frontend/views/poster/update.php" />
         <option value="$PROJECT_DIR$/advanced/frontend/views/site/poster_profile.php" />
         <option value="$PROJECT_DIR$/advanced/frontend/views/site/all.php" />
+        <option value="$PROJECT_DIR$/advanced/common/models/Profile.php" />
+        <option value="$PROJECT_DIR$/advanced/frontend/controllers/SiteController.php" />
+        <option value="$PROJECT_DIR$/advanced/frontend/controllers/PosterController.php" />
+        <option value="$PROJECT_DIR$/advanced/frontend/views/site/user_profile.php" />
+        <option value="$PROJECT_DIR$/advanced/frontend/views/site/one.php" />
       </list>
     </option>
   </component>
@@ -208,9 +195,9 @@
     </include_path>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="972" />
+    <option name="x" value="960" />
     <option name="y" value="28" />
-    <option name="width" value="948" />
+    <option name="width" value="960" />
     <option name="height" value="1024" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
@@ -241,7 +228,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -337,11 +323,12 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../noosfera" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path" value="node" />
     <property name="settings.editor.selected.configurable" value="reference.webide.settings.project.settings.php" />
   </component>
@@ -402,12 +389,13 @@
       <workItem from="1551239778517" duration="1245000" />
       <workItem from="1551333326144" duration="10444000" />
       <workItem from="1551412834927" duration="12984000" />
-      <workItem from="1551430046044" duration="34730000" />
+      <workItem from="1551430046044" duration="37445000" />
+      <workItem from="1551936604028" duration="1751000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="202109000" />
+    <option name="totallyTimeSpent" value="206575000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -422,7 +410,7 @@
     <frame x="-2" y="29" width="1924" height="1029" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.15208112" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.15368196" />
       <window_info id="Structure" order="1" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Database Changes" order="0" />
@@ -471,19 +459,6 @@
     <option name="LAST_COMMIT_MESSAGE" value="" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/public_html/index.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public_html/.htaccess">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/advanced/console/migrations/m181120_111109_categories.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
-          <caret line="32" column="30" selection-start-line="32" selection-start-column="30" selection-end-line="32" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/advanced/console/migrations/m181120_110920_city.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="495">
@@ -517,11 +492,6 @@
         <state relative-caret-position="285">
           <caret line="20" selection-start-line="20" selection-end-line="20" />
         </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/advanced/common/models/LoginForm.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-360" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/advanced/console/migrations/m190225_050547_foreingKey.php">
@@ -610,23 +580,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/advanced/frontend/controllers/ProfileController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="121">
-          <caret line="45" column="11" selection-start-line="45" selection-start-column="11" selection-end-line="45" selection-end-column="11" />
-          <folding>
-            <element signature="e#40#48#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/advanced/frontend/views/site/one.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="21" column="16" selection-start-line="21" selection-end-line="22" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/advanced/frontend/views/profile/index.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
@@ -641,16 +594,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
           <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/advanced/common/models/Profile.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-165">
-          <caret line="45" column="38" selection-start-line="45" selection-start-column="38" selection-end-line="45" selection-end-column="38" />
-          <folding>
-            <element signature="e#33#41#0#PHP" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -692,30 +635,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/advanced/common/models/PosterProfileSearch.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="529">
-          <caret line="49" column="29" selection-start-line="49" selection-start-column="29" selection-end-line="49" selection-end-column="29" />
-          <folding>
-            <element signature="e#33#52#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public_html/assets/f14d5883/css/bootstrap.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="289">
           <caret line="4710" column="1" selection-start-line="4710" selection-start-column="1" selection-end-line="4710" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/advanced/common/models/PosterSearch.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="43" column="32" selection-start-line="43" selection-start-column="32" selection-end-line="43" selection-end-column="32" />
-          <folding>
-            <element signature="e#33#52#0#PHP" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -735,16 +658,6 @@
           <caret line="10" column="48" selection-start-line="9" selection-start-column="2" selection-end-line="10" selection-end-column="48" />
           <folding>
             <element signature="e#7#28#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/advanced/common/models/Poster.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-134">
-          <caret line="19" column="26" selection-start-line="19" selection-start-column="18" selection-end-line="19" selection-end-column="26" />
-          <folding>
-            <element signature="e#33#41#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -804,19 +717,32 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/advanced/frontend/views/site/user_profile.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="27" column="19" selection-start-line="27" selection-start-column="19" selection-end-line="33" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/advanced/frontend/views/site/poster_profile.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="285">
           <caret line="24" column="107" lean-forward="true" selection-start-line="24" selection-start-column="107" selection-end-line="24" selection-end-column="107" />
           <folding>
             <element signature="e#87#110#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/advanced/common/models/PosterProfileSearch.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="529">
+          <caret line="49" column="29" selection-start-line="49" selection-start-column="29" selection-end-line="49" selection-end-column="29" />
+          <folding>
+            <element signature="e#33#52#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/advanced/common/models/Profile.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="960">
+          <caret line="114" column="70" lean-forward="true" selection-start-line="114" selection-start-column="70" selection-end-line="114" selection-end-column="70" />
+          <folding>
+            <element signature="e#33#41#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -828,22 +754,82 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/advanced/frontend/controllers/PosterController.php">
+    <entry file="file://$PROJECT_DIR$/advanced/common/models/PosterSearch.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1140">
-          <caret line="97" column="9" lean-forward="true" selection-start-line="97" selection-start-column="9" selection-end-line="97" selection-end-column="9" />
+        <state relative-caret-position="319">
+          <caret line="50" column="13" selection-start-line="48" selection-start-column="12" selection-end-line="50" selection-end-column="13" />
+          <folding>
+            <element signature="e#33#52#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/advanced/common/models/Categories.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-71" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/advanced/common/models/City.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-206" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/advanced/common/models/CitySearch.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/advanced/common/models/LoginForm.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/advanced/common/models/Poster.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1110">
+          <caret line="19" column="26" selection-start-line="19" selection-start-column="18" selection-end-line="19" selection-end-column="26" />
+          <folding>
+            <element signature="e#33#41#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/advanced/frontend/controllers/ProfileController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="664">
+          <caret line="45" column="11" selection-start-line="45" selection-start-column="11" selection-end-line="45" selection-end-column="11" />
           <folding>
             <element signature="e#40#48#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/advanced/frontend/views/site/one.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="21" column="44" lean-forward="true" selection-start-line="21" selection-start-column="44" selection-end-line="21" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/advanced/frontend/views/site/user_profile.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="29" column="25" lean-forward="true" selection-start-line="29" selection-start-column="25" selection-end-line="29" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/advanced/frontend/controllers/SiteController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="409">
-          <caret line="91" lean-forward="true" selection-start-line="79" selection-start-column="8" selection-end-line="91" />
+        <state relative-caret-position="1109">
+          <caret line="192" column="36" lean-forward="true" selection-start-line="192" selection-start-column="36" selection-end-line="192" selection-end-column="36" />
           <folding>
             <element signature="e#40#78#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/advanced/frontend/controllers/PosterController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="55" column="8" selection-start-line="55" selection-start-column="8" selection-end-line="55" selection-end-column="8" />
+          <folding>
+            <element signature="e#40#48#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>

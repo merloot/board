@@ -23,15 +23,12 @@ use yii\bootstrap\Html;
                     <?=$profile->p_image?>
                     <?=$profile->p_description?>
                     <?=Html::img('../../uploads/avatar/'.$profile->p_image)?>
-
-
                     <?=Html::beginForm(['/profile/update'.'?'.'id'.'='.$profile->p_id],'post')
                     . Html::submitButton(
                         'Изменение личного кабинета',
                         ['class' => 'btn btn-link logout']
                         )
-                        . Html::endForm()
-                        ;?>
+                        . Html::endForm();?>
                 </div>
         </div>
     </div>

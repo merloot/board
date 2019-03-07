@@ -47,8 +47,13 @@ class PosterController extends Controller
 
         public function actionOne($po_id)
     {
-        $poster= Poster::find()->andWhere(['po_id'=>$po_id])->one();
-        return $this->render('one',['poster'=>$poster]);
+        $poster= Poster::find()
+            ->andWhere(['po_id'=>$po_id])
+            ->one();
+
+        return $this->render('one',[
+            'poster'=>$poster
+        ]);
     }
 
     /**
